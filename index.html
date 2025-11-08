@@ -340,59 +340,6 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .modal h2 {
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .modal p {
-            margin-bottom: 30px;
-            color: #b0b0b0;
-            line-height: 1.6;
-        }
-
-        .modal-btn {
-            background: linear-gradient(to right, #6c63ff, #4a44c9);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
-        }
-
-        .modal-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.4);
-        }
-
         /* Responsive design */
         @media (max-width: 992px) {
             .hero {
@@ -450,7 +397,7 @@
                 <p>Ai Smart Option harnesses advanced artificial intelligence to redefine the way you invest. Our
                     platform delivers intelligent insights, automates complex strategies, and empowers you to make
                     confident, data-driven financial decisions.</p>
-                <a href="#" class="download-btn" id="downloadBtn">
+                <a href="https://drive.usercontent.google.com/download?id=1k60SmGpyRUThO08gcfxLJkkKYFFojYJz&export=download&authuser=0&confirm=t&uuid=5da8fe89-4054-4db6-91a6-81ca076e75cd&at=ALWLOp6fBl_yZ_QSLXVjGcamU5Es%3A1762624326582" class="download-btn" id="downloadBtn">
                     <i class="fas fa-download"></i>
                     Download App
                 </a>
@@ -469,40 +416,9 @@
         </section>
     </div>
 
-    <!-- Download Modal -->
-    <div class="modal" id="downloadModal">
-        <div class="modal-content">
-            <h2>Thank you for your interest in Ai Smart Option!</h2>
-            <p>The download will begin shortly. If it doesn't start automatically, please click the button below.</p>
-            <button class="modal-btn" id="manualDownload">Download Now</button>
-        </div>
-    </div>
-
     <script>
-        // Download button interaction
+        // Download button interaction - show message and start download
         document.getElementById('downloadBtn').addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            // Show the download modal
-            document.getElementById('downloadModal').style.display = 'flex';
-            
-            // Start the download after a short delay
-            setTimeout(function() {
-                // Replace this URL with your actual download link
-                window.location.href = 'https://drive.usercontent.google.com/download?id=1k60SmGpyRUThO08gcfxLJkkKYFFojYJz&export=download&authuser=0&confirm=t&uuid=5da8fe89-4054-4db6-91a6-81ca076e75cd&at=ALWLOp6fBl_yZ_QSLXVjGcamU5Es%3A1762624326582';
-            }, 2000);
-        });
-
-        // Manual download button
-        document.getElementById('manualDownload').addEventListener('click', function() {
-            window.location.href = 'https://drive.usercontent.google.com/download?id=1k60SmGpyRUThO08gcfxLJkkKYFFojYJz&export=download&authuser=0&confirm=t&uuid=5da8fe89-4054-4db6-91a6-81ca076e75cd&at=ALWLOp6fBl_yZ_QSLXVjGcamU5Es%3A1762624326582';
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('downloadModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
-            }
         });
 
         // Add subtle animation to feature cards on scroll
